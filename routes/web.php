@@ -20,6 +20,8 @@ Route::get('/about', [PagesController::class, 'about']);
 Route::get('/contact', [PagesController::class, 'contact']);
 
 Route::get('/projects', [ProjectsController::class, 'index']);
+Route::get('/projects/create', [ProjectsController::class, 'create']);
+Route::post('/projects', [ProjectsController::class, 'store']);//saving
 
 // Route::get('/contact', function () {
 //     return view('contact');
