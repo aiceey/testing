@@ -4,9 +4,10 @@
 	<h1>Edit Project</h1>
 
 	<form method="POST" action="/projects/{{ $project->id }}">
-
-		{{ method_field('PATCH') }} <!-- HIDDEN patch -->
-		{{ csrf_field() }}
+		@method('PATCH')
+		@csrf
+		<!-- {{ method_field('PATCH') }} <!-- HIDDEN patch 
+		{{ csrf_field() }} -->
 		<div class="field">
 			<label class="label">Title</label>
 
@@ -31,9 +32,10 @@
 	</form>
 
 	<form method="POST" action="/projects/{{ $project->id }}">
-
-		{{ method_field('DELETE') }} <!-- HIDDEN patch -->
-		{{ csrf_field() }}
+		@method('DELETE')
+		@csrf
+		<!-- {{ method_field('DELETE') }} <!-- HIDDEN patch 
+		{{ csrf_field() }} -->
 
 		<div class="row">
 			<div>
