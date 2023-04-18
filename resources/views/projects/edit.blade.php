@@ -6,7 +6,7 @@
 	<form method="POST" action="/projects/{{ $project->id }}">
 		@method('PATCH')
 		@csrf
-		<!-- {{ method_field('PATCH') }} <!-- HIDDEN patch 
+		<!-- {{ method_field('PATCH') }}  HIDDEN patch 
 		{{ csrf_field() }} -->
 		<div class="field">
 			<label class="label">Title</label>
@@ -34,7 +34,7 @@
 	<form method="POST" action="/projects/{{ $project->id }}">
 		@method('DELETE')
 		@csrf
-		<!-- {{ method_field('DELETE') }} <!-- HIDDEN patch 
+		<!-- {{ method_field('DELETE') }} HIDDEN patch 
 		{{ csrf_field() }} -->
 
 		<div class="row">
