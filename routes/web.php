@@ -19,11 +19,28 @@ Route::get('/', [PagesController::class, 'home']);
 Route::get('/about', [PagesController::class, 'about']);
 Route::get('/contact', [PagesController::class, 'contact']);
 
-Route::get('/projects', [ProjectsController::class, 'index']);
-Route::get('/projects/create', [ProjectsController::class, 'create']);
-Route::post('/projects', [ProjectsController::class, 'store']);//saving
+// Route::get('/projects', [ProjectsController::class, 'index']);
+// Route::get('/projects/create', [ProjectsController::class, 'create']);
 
-// Route::get('/contact', function () {
-//     return view('contact');
-// });
+// Route::get('/projects/{project}',[ProjectsController::class, 'show']);
 
+// Route::post('/projects', [ProjectsController::class, 'store']);//saving
+
+// Route::get('/projects/{project}/edit', [ProjectsController::class, 'edit']);
+
+// Route::patch('/projects/{project}', [ProjectsController::class, 'update']);//update
+
+// Route::delete('/projects/{project}', [ProjectsController::class, 'destroy']);//delete
+
+
+Route::resource('projects', ProjectsController::class); // buong controller
+
+// GET /projects (index) retrieving
+// GET /projects/create (create) 
+
+// GET /projects/id  (show) 
+// POST /projects (store)  saving
+// GET /projects/id/edit (edit) 
+
+// PATCH /projects/id (update)  update
+// DELETE /projects/id (destroy)  delete
