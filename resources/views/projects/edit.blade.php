@@ -29,4 +29,17 @@
 			</div>
 		</div>
 	</form>
+
+	<form method="POST" action="/projects/{{ $project->id }}">
+
+		{{ method_field('DELETE') }} <!-- HIDDEN patch -->
+		{{ csrf_field() }}
+
+		<div class="row">
+			<div>
+				<button type="submit" class="btn btn-danger btn-block btn-lg text-white"> Delete Project</button>
+			</div>
+		</div>
+		
+	</form>
 @endsection
