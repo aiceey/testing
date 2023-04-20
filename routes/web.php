@@ -34,6 +34,13 @@ Route::get('/contact', [PagesController::class, 'contact']);
 
 
 Route::resource('projects', ProjectsController::class); // buong controller
+Route::get('auth/register', function () {
+    return view('auth/register');
+});
+
+Route::get('auth/login', function () {
+    return view('auth/login');
+});
 
 // GET /projects (index) retrieving
 // GET /projects/create (create) 

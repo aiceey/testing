@@ -32,12 +32,12 @@ class ProjectsController extends Controller
 
     public function store(){
 
-        // dd(request(['title','decription']));
+        Project::create(request()->validate([
+             'title' => ['required', 'min:3'],
+            'description' => ['required', 'min:3','max:255']
 
-        Project::create([
-            'title' => request('title'),
-            'description' => request('description')
-        ]);
+        ]));
+        // dd(request(['title','decription']));
 
         // $project = new Project();
         // $project->title = request('title');
